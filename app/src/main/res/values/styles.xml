@@ -4,9 +4,22 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
 
+    <style name="TabLayoutTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">10sp</item>
+    </style>
+
     <!--
     ICON USED
     Menu bars: http://www.flaticon.com/free-icon/menu_130918
+    Home: http://www.flaticon.com/free-icon/home_131057
+    Categories: http://www.flaticon.com/free-icon/app_149398
+    Search: http://www.flaticon.com/free-icon/search_132939
+    Help: http://www.flaticon.com/free-icon/question_157097
+    Profile: http://www.flaticon.com/free-icon/user_166277
+    Question: http://www.flaticon.com/free-icon/question_157097
+    Bag: http://www.flaticon.com/free-icon/shopping-bag_131049
+    Arrow Down: http://www.flaticon.com/free-icon/down-arrow_203484
+    Arrow Right: http://www.flaticon.com/free-icon/right-chevron_339918
     -->
 
 </resources>
