@@ -20,6 +20,13 @@
     Bag: http://www.flaticon.com/free-icon/shopping-bag_131049
     Arrow Down: http://www.flaticon.com/free-icon/down-arrow_203484
     Arrow Right: http://www.flaticon.com/free-icon/right-chevron_339918
+    Arrow Left: http://www.flaticon.com/free-icon/left-chevron_339876
     -->
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/colorBorder</item>
+    </style>
 
 </resources>

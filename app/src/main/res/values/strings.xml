@@ -15,4 +15,9 @@
     <!-- IMAGE DESCRIPTION -->
     <string name="image_banner">Banner image</string>
     <string name="image_product">Product image</string>
+
+    <!-- DUMMY -->
+    <string name="product_brand">Dunlopillo</string>
+    <string name="product_name">Dunlopillo Pincore Latex Lavender Pillow</string>
+    <string name="product_price">IDR 1.999.999</string>
 </resources>
