@@ -10,7 +10,8 @@ public class LoadActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        startActivity(new Intent(LoadActivity.this, ShopActivity.class));
+        startActivity(new Intent(LoadActivity.this, MainActivity.class));
+        //startActivity(new Intent(LoadActivity.this, ShopActivity.class));
         finish();
     }
 

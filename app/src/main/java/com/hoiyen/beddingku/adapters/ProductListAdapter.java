@@ -1,15 +1,15 @@
 package com.hoiyen.beddingku.adapters;
 
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.hoiyen.beddingku.R;
-
-/**
- * Created by Hoiyen on 5/28/17.
- */
+import com.hoiyen.beddingku.ShopActivity;
+import com.hoiyen.beddingku.fragments.AttributesFragment;
+import com.hoiyen.beddingku.fragments.ProductFragment;
 
 public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.ProductListViewHolder> {
 
@@ -23,7 +23,19 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
 
     @Override
     public void onBindViewHolder(ProductListViewHolder holder, int position) {
+        holder.container.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                final ShopActivity activity = (ShopActivity) v.getContext();
+                activity.getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, ProductFragment.instance())
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
     }
 
     @Override
@@ -32,8 +44,12 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
     }
 
     class ProductListViewHolder extends RecyclerView.ViewHolder {
+
+        private ConstraintLayout container;
+
         public ProductListViewHolder(View view) {
             super(view);
+            container = (ConstraintLayout) view.findViewById(R.id.rv_container);
         }
     }
 

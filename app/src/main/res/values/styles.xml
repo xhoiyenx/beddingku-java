@@ -2,6 +2,7 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
     </style>
 
     <style name="TabLayoutTextAppearance" parent="TextAppearance.Design.Tab">
@@ -27,6 +28,11 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0.5dp</item>
         <item name="android:background">@color/colorBorder</item>
+    </style>
+
+    <style name="Divider.Margin" parent="Divider">
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
     </style>
 
 </resources>

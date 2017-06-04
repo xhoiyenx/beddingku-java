@@ -1,5 +1,6 @@
 package com.hoiyen.beddingku.fragments;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
@@ -40,6 +41,17 @@ public final class HomeListFragment extends Fragment {
 
         // init banner layout
         layoutManager = new LinearLayoutManager(context);
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        // init banner adapter
+        bannerAdapter = new HomeBannerAdapter();
+
+        // init banner layout
+        layoutManager = new LinearLayoutManager(activity);
     }
 
     @Override

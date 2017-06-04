@@ -1,7 +1,9 @@
 package com.hoiyen.beddingku.fragments;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -13,6 +15,7 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 
 import com.hoiyen.beddingku.R;
+import com.hoiyen.beddingku.ShopActivity;
 import com.hoiyen.beddingku.adapters.CategoryExpandableAdapter;
 
 public class AttributesFragment extends Fragment {
@@ -43,6 +46,12 @@ public class AttributesFragment extends Fragment {
     }
 
     @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        this.context = activity;
+    }
+
+    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
@@ -62,6 +71,18 @@ public class AttributesFragment extends Fragment {
 
         // bind category view
         elvCategory = (ExpandableListView) view.findViewById(R.id.elv_category);
+
+        // bind listener to category list
+        elvCategory.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+
+                // Go to product list
+                context.startActivity(new Intent(getActivity(), ShopActivity.class));
+
+                return false;
+            }
+        });
 
         // bind brand view
         rvBrand = (RecyclerView) view.findViewById(R.id.rv_brand);

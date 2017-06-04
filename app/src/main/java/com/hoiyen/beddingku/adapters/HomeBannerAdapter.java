@@ -1,5 +1,6 @@
 package com.hoiyen.beddingku.adapters;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.hoiyen.beddingku.R;
+import com.hoiyen.beddingku.ShopActivity;
 
 /**
  * Created by Hoiyen on 5/27/17.
@@ -28,7 +30,13 @@ public final class HomeBannerAdapter extends RecyclerView.Adapter<HomeBannerAdap
 
     @Override
     public void onBindViewHolder(HomeBannerViewHolder holder, int position) {
-
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // go to shopactivity
+                v.getContext().startActivity(new Intent(v.getContext(), ShopActivity.class));
+            }
+        });
     }
 
     @Override
